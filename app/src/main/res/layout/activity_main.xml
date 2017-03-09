@@ -1,19 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="morningpages.app.niklas.morningpages.MainActivity">
 
+    <!-- TODO Ok Button erst anzeigen, wenn Mind. eine Zahl (außer der Null) -->
+
     <TextView
-        android:id="@+id/test"
+        android:id="@+id/textView13"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="1"
+        android:textSize="35sp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_toStartOf="@+id/labelHours"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="1"
+        android:textSize="35sp"
+        android:layout_alignBaseline="@+id/textView13"
+        android:layout_alignBottom="@+id/textView13"
+        android:layout_toRightOf="@+id/textView13"
+        android:layout_toLeftOf="@+id/textView31"
+        android:layout_toStartOf="@+id/textView31" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="1"
+        android:textSize="35sp"
+        android:layout_alignBaseline="@+id/textView24"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/currTenSeconds"
+        android:layout_toEndOf="@+id/currTenSeconds" />
+
+    <TextView
+        android:id="@+id/labelHours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="h"
+        android:fontFamily="serif"
+        android:textSize="15sp"
+        android:paddingLeft="2dp"
+        android:paddingBottom="6dp"
+        android:layout_alignBottom="@+id/currSingleHours"
+        android:layout_toRightOf="@+id/currSingleHours"
+        android:layout_toEndOf="@+id/currSingleHours" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/currTenMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="0"
+        android:textSize="35sp"
+        android:layout_alignBottom="@+id/labelHours"
+        android:layout_toRightOf="@+id/labelHours"
+        android:layout_toEndOf="@+id/labelHours"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+    <TextView
+        android:id="@+id/currTenSeconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:fontFamily="serif"
+        android:text="0"
+        android:textSize="35sp"
+        android:layout_alignBaseline="@+id/labelMinutes"
+        android:layout_alignBottom="@+id/labelMinutes"
+        android:layout_toRightOf="@+id/labelMinutes"
+        android:layout_toEndOf="@+id/labelMinutes" />
+
+    <TextView
+        android:id="@+id/currSingleHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:fontFamily="serif"
+        android:text="0"
+        android:textSize="35sp"
+        android:layout_toRightOf="@+id/currTenHours"
+        android:layout_toEndOf="@+id/currTenHours" />
+
+    <TextView
+        android:id="@+id/currTenHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="0"
+        android:textSize="35sp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_alignBaseline="@+id/currSingleHours"
+        android:layout_alignBottom="@+id/currSingleHours"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="1"
+        android:textSize="35sp"
+        android:layout_below="@+id/currTenHours"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_toStartOf="@+id/labelHours"
+        android:layout_alignRight="@+id/currTenHours"
+        android:layout_alignEnd="@+id/currTenHours" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="1"
+        android:textSize="35sp"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toRightOf="@+id/textView13"
+        android:layout_toEndOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="1"
+        android:textSize="35sp"
+        android:layout_alignTop="@+id/textView23"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/textView31"
+        android:layout_alignStart="@+id/textView31" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="1"
+        android:textSize="35sp"
+        android:layout_alignBaseline="@+id/textView25"
+        android:layout_alignBottom="@+id/textView25"
+        android:layout_toRightOf="@+id/textView13"
+        android:layout_toLeftOf="@+id/textView31"
+        android:layout_toStartOf="@+id/textView31" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="1"
+        android:textSize="35sp"
+        android:layout_below="@+id/textView24"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/textView31"
+        android:layout_alignStart="@+id/textView31" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:layout_alignEnd="@+id/textView13"
+        android:layout_alignLeft="@+id/textView13"
+        android:layout_alignRight="@+id/textView13"
+        android:layout_alignStart="@+id/textView13"
+        android:layout_below="@+id/textView13"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="1"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/currSingleMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="0"
+        android:textSize="35sp"
+        android:layout_alignBaseline="@+id/currTenMinutes"
+        android:layout_alignBottom="@+id/currTenMinutes"
+        android:layout_toRightOf="@+id/currTenMinutes"
+        android:layout_toEndOf="@+id/currTenMinutes" />
+
+    <TextView
+        android:id="@+id/currSingleSeconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="0"
+        android:textSize="35sp"
+        android:layout_alignBaseline="@+id/currTenSeconds"
+        android:layout_alignBottom="@+id/currTenSeconds"
+        android:layout_toRightOf="@+id/currTenSeconds"
+        android:layout_toEndOf="@+id/currTenSeconds" />
+
+    <TextView
+        android:id="@+id/labelMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:paddingLeft="2dp"
+        android:text="m"
+        android:paddingBottom="6dp"
+        android:textSize="15sp"
+        android:layout_alignBottom="@+id/currSingleMinutes"
+        android:layout_toRightOf="@+id/currSingleMinutes"
+        android:layout_toEndOf="@+id/currSingleMinutes" />
+
+    <TextView
+        android:id="@+id/currentSeconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/currSingleSeconds"
+        android:layout_alignBottom="@+id/currSingleSeconds"
+        android:layout_toEndOf="@+id/currSingleSeconds"
+        android:layout_toRightOf="@+id/currSingleSeconds"
+        android:fontFamily="serif"
+        android:paddingBottom="6dp"
+        android:paddingLeft="2dp"
+        android:text="s"
+        android:textSize="15sp" />
+</RelativeLayout>
