@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,48 +9,61 @@
     <!-- TODO Ok Button erst anzeigen, wenn Mind. eine Zahl (außer der Null) -->
 
     <TextView
-        android:id="@+id/textView13"
-        android:layout_width="50dp"
+        android:id="@+id/text4"
+        android:layout_width="0dp"
         android:layout_height="80dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="0dp"
         android:fontFamily="serif"
         android:gravity="center_horizontal"
-        android:text="1"
+        android:text="4"
         android:textSize="35sp"
-        android:layout_below="@+id/textView3"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_toStartOf="@+id/labelHours"
-        android:layout_alignRight="@+id/textView3"
-        android:layout_alignEnd="@+id/textView3" />
+        app:layout_constraintBottom_toTopOf="@+id/text7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/currSingleHours"
+        app:layout_constraintTop_toBottomOf="@+id/text1"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1" />
 
     <TextView
-        android:id="@+id/textView24"
-        android:layout_width="50dp"
+        android:id="@+id/text5"
+        android:layout_width="0dp"
         android:layout_height="80dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="1dp"
         android:fontFamily="serif"
         android:gravity="center_horizontal"
-        android:text="1"
+        android:text="5"
         android:textSize="35sp"
-        android:layout_alignBaseline="@+id/textView13"
-        android:layout_alignBottom="@+id/textView13"
-        android:layout_toRightOf="@+id/textView13"
-        android:layout_toLeftOf="@+id/textView31"
-        android:layout_toStartOf="@+id/textView31" />
+        app:layout_constraintBottom_toTopOf="@+id/text8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/text4"
+        app:layout_constraintRight_toLeftOf="@+id/currSingleSeconds"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1" />
 
     <TextView
-        android:id="@+id/textView31"
-        android:layout_width="50dp"
+        android:id="@+id/text6"
+        android:layout_width="0dp"
         android:layout_height="80dp"
         android:fontFamily="serif"
         android:gravity="center_horizontal"
-        android:text="1"
+        android:text="6"
         android:textSize="35sp"
-        android:layout_alignBaseline="@+id/textView24"
-        android:layout_alignBottom="@+id/textView24"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/currTenSeconds"
-        android:layout_toEndOf="@+id/currTenSeconds" />
+        app:layout_constraintLeft_toLeftOf="@+id/text3"
+        app:layout_constraintRight_toRightOf="@+id/text3"
+        app:layout_constraintTop_toBottomOf="@+id/text3"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <TextView
         android:id="@+id/labelHours"
@@ -61,9 +74,12 @@
         android:textSize="15sp"
         android:paddingLeft="2dp"
         android:paddingBottom="6dp"
-        android:layout_alignBottom="@+id/currSingleHours"
-        android:layout_toRightOf="@+id/currSingleHours"
-        android:layout_toEndOf="@+id/currSingleHours" />
+        android:layout_marginStart="1dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/currSingleHours"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/currSingleHours"
+        android:layout_marginLeft="1dp" />
 
     <TextView
         android:id="@+id/currTenMinutes"
@@ -72,37 +88,39 @@
         android:fontFamily="serif"
         android:text="0"
         android:textSize="35sp"
-        android:layout_alignBottom="@+id/labelHours"
-        android:layout_toRightOf="@+id/labelHours"
-        android:layout_toEndOf="@+id/labelHours"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp" />
+        android:layout_marginStart="10dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/currSingleMinutes"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/labelHours"
+        android:layout_marginLeft="0dp" />
 
     <TextView
         android:id="@+id/currTenSeconds"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginStart="15dp"
         android:fontFamily="serif"
         android:text="0"
         android:textSize="35sp"
-        android:layout_alignBaseline="@+id/labelMinutes"
-        android:layout_alignBottom="@+id/labelMinutes"
-        android:layout_toRightOf="@+id/labelMinutes"
-        android:layout_toEndOf="@+id/labelMinutes" />
+        android:layout_marginStart="15dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/currSingleSeconds"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/labelMinutes"
+        android:layout_marginLeft="15dp" />
 
     <TextView
         android:id="@+id/currSingleHours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="15dp"
         android:fontFamily="serif"
         android:text="0"
         android:textSize="35sp"
-        android:layout_toRightOf="@+id/currTenHours"
-        android:layout_toEndOf="@+id/currTenHours" />
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="15dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/currTenHours" />
 
     <TextView
         android:id="@+id/currTenHours"
@@ -111,99 +129,177 @@
         android:fontFamily="serif"
         android:text="0"
         android:textSize="35sp"
-        android:layout_marginLeft="100dp"
         android:layout_marginStart="100dp"
-        android:layout_alignBaseline="@+id/currSingleHours"
-        android:layout_alignBottom="@+id/currSingleHours"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/currSingleHours"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="100dp" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="50dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="50dp"
-        android:fontFamily="serif"
-        android:gravity="center_horizontal"
-        android:text="1"
-        android:textSize="35sp"
-        android:layout_below="@+id/currTenHours"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="18dp"
-        android:layout_marginStart="18dp"
-        android:layout_toStartOf="@+id/labelHours"
-        android:layout_alignRight="@+id/currTenHours"
-        android:layout_alignEnd="@+id/currTenHours" />
-
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="50dp"
+        android:id="@+id/text1"
+        android:layout_width="0dp"
         android:layout_height="80dp"
         android:fontFamily="serif"
         android:gravity="center_horizontal"
         android:text="1"
         android:textSize="35sp"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_toRightOf="@+id/textView13"
-        android:layout_toEndOf="@+id/textView13" />
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/text4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text2"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/text4" />
 
     <TextView
-        android:id="@+id/textView30"
-        android:layout_width="50dp"
-        android:layout_height="80dp"
+        android:id="@+id/text2"
+        android:layout_width="135dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="33dp"
         android:fontFamily="serif"
         android:gravity="center_horizontal"
-        android:text="1"
+        android:text="2"
         android:textSize="35sp"
-        android:layout_alignTop="@+id/textView23"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/textView31"
-        android:layout_alignStart="@+id/textView31" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toRightOf="@+id/text1"
+        app:layout_constraintRight_toLeftOf="@+id/text3"
+        app:layout_constraintTop_toBottomOf="@+id/currSingleMinutes"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <TextView
-        android:id="@+id/textView11"
-        android:layout_width="50dp"
-        android:layout_height="80dp"
+        android:id="@+id/text3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:fontFamily="serif"
         android:gravity="center_horizontal"
-        android:text="1"
+        android:text="3"
         android:textSize="35sp"
-        android:layout_alignBaseline="@+id/textView25"
-        android:layout_alignBottom="@+id/textView25"
-        android:layout_toRightOf="@+id/textView13"
-        android:layout_toLeftOf="@+id/textView31"
-        android:layout_toStartOf="@+id/textView31" />
+        app:layout_constraintBottom_toBottomOf="@+id/text2"
+        app:layout_constraintLeft_toRightOf="@+id/text5"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text2"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <TextView
-        android:id="@+id/textView32"
-        android:layout_width="50dp"
+        android:id="@+id/text8"
+        android:layout_width="0dp"
         android:layout_height="80dp"
         android:fontFamily="serif"
         android:gravity="center_horizontal"
-        android:text="1"
+        android:text="8"
         android:textSize="35sp"
-        android:layout_below="@+id/textView24"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@+id/textView31"
-        android:layout_alignStart="@+id/textView31" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@+id/text5"
+        app:layout_constraintRight_toRightOf="@+id/text5"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_editor_absoluteY="251dp" />
 
     <TextView
-        android:id="@+id/textView25"
-        android:layout_width="50dp"
+        android:id="@+id/text0"
+        android:layout_width="0dp"
         android:layout_height="80dp"
-        android:layout_alignEnd="@+id/textView13"
-        android:layout_alignLeft="@+id/textView13"
-        android:layout_alignRight="@+id/textView13"
-        android:layout_alignStart="@+id/textView13"
-        android:layout_below="@+id/textView13"
         android:fontFamily="serif"
         android:gravity="center_horizontal"
-        android:text="1"
-        android:textSize="35sp" />
+        android:text="0"
+        android:textSize="35sp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@+id/text5"
+        app:layout_constraintRight_toRightOf="@+id/text5"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_editor_absoluteY="331dp" />
+
+    <TextView
+        android:id="@+id/text9"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="9"
+        android:textSize="35sp"
+        app:layout_constraintRight_toRightOf="@+id/text6"
+        app:layout_constraintTop_toBottomOf="@+id/text6"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/text8"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/textGo"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="80dp"
+        android:background="colora"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:src="@drawable/forward"
+        android:scaleType="centerInside"
+        android:text="9"
+        android:textSize="35sp"
+        android:visibility="visible"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/text6"
+        app:layout_constraintRight_toRightOf="@+id/text6"
+        app:layout_constraintTop_toBottomOf="@+id/text6"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <TextView
+        android:id="@+id/text7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="7"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/text4"
+        app:layout_constraintRight_toRightOf="@+id/text4"
+        app:layout_constraintTop_toBottomOf="@+id/text5"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <ImageButton
+        android:id="@+id/textClearLast"
+        android:layout_width="105dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="8dp"
+        android:background="asjdio"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:scaleType="centerInside"
+        android:src="@drawable/back"
+        android:text="7"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text0"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/text7"
+        app:layout_constraintRight_toLeftOf="@+id/text0"
+        app:layout_constraintTop_toBottomOf="@+id/text7"
+        app:layout_constraintVertical_bias="0.333" />
 
     <TextView
         android:id="@+id/currSingleMinutes"
@@ -212,10 +308,14 @@
         android:fontFamily="serif"
         android:text="0"
         android:textSize="35sp"
-        android:layout_alignBaseline="@+id/currTenMinutes"
-        android:layout_alignBottom="@+id/currTenMinutes"
-        android:layout_toRightOf="@+id/currTenMinutes"
-        android:layout_toEndOf="@+id/currTenMinutes" />
+        android:layout_marginStart="1dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/labelMinutes"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
         android:id="@+id/currSingleSeconds"
@@ -224,10 +324,12 @@
         android:fontFamily="serif"
         android:text="0"
         android:textSize="35sp"
-        android:layout_alignBaseline="@+id/currTenSeconds"
-        android:layout_alignBottom="@+id/currTenSeconds"
-        android:layout_toRightOf="@+id/currTenSeconds"
-        android:layout_toEndOf="@+id/currTenSeconds" />
+        android:layout_marginStart="1dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/currentSeconds"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/currTenSeconds"
+        android:layout_marginLeft="1dp" />
 
     <TextView
         android:id="@+id/labelMinutes"
@@ -238,21 +340,23 @@
         android:text="m"
         android:paddingBottom="6dp"
         android:textSize="15sp"
-        android:layout_alignBottom="@+id/currSingleMinutes"
-        android:layout_toRightOf="@+id/currSingleMinutes"
-        android:layout_toEndOf="@+id/currSingleMinutes" />
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="@+id/currTenSeconds"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/currSingleMinutes" />
 
     <TextView
         android:id="@+id/currentSeconds"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/currSingleSeconds"
-        android:layout_alignBottom="@+id/currSingleSeconds"
-        android:layout_toEndOf="@+id/currSingleSeconds"
-        android:layout_toRightOf="@+id/currSingleSeconds"
         android:fontFamily="serif"
         android:paddingBottom="6dp"
         android:paddingLeft="2dp"
         android:text="s"
-        android:textSize="15sp" />
-</RelativeLayout>
+        android:textSize="15sp"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="36dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/currSingleSeconds" />
+</android.support.constraint.ConstraintLayout>
