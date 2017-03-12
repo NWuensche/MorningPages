@@ -10,24 +10,28 @@
 
     <!-- TODO Ok Button erst anzeigen, wenn Mind. eine Zahl (außer der Null) -->
 
-    <TextView
+    <Button
         android:id="@+id/text4"
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:fontFamily="serif"
-        android:gravity="center_horizontal"
+        android:background="#FAFAFA"
+        style="?android:attr/borderlessButtonStyle"
+        android:gravity="center"
         android:text="4"
         android:textSize="35sp"
         app:layout_constraintLeft_toLeftOf="@+id/text1"
         app:layout_constraintRight_toLeftOf="@+id/text5"
         app:layout_constraintTop_toBottomOf="@+id/text2" />
 
-    <TextView
+    <Button
         android:id="@+id/text5"
         android:layout_width="122dp"
         android:layout_height="80dp"
         android:fontFamily="serif"
-        android:gravity="center_horizontal"
+        android:background="#FAFAFA"
+        style="?android:attr/borderlessButtonStyle"
+        android:gravity="center"
         android:text="5"
         android:textSize="35sp"
         app:layout_constraintLeft_toLeftOf="@+id/text2"
@@ -35,12 +39,14 @@
         app:layout_constraintTop_toBottomOf="@+id/text2"
         app:layout_constraintHorizontal_bias="0.428" />
 
-    <TextView
+    <Button
         android:id="@+id/text6"
         android:layout_width="122dp"
         android:layout_height="80dp"
         android:fontFamily="serif"
-        android:gravity="center_horizontal"
+        android:background="#FAFAFA"
+        style="?android:attr/borderlessButtonStyle"
+        android:gravity="center"
         android:text="6"
         android:textSize="35sp"
         app:layout_constraintLeft_toLeftOf="@+id/text3"
@@ -107,27 +113,32 @@
         app:layout_constraintTop_toTopOf="@+id/currSingleHours"
         android:layout_marginTop="0dp" />
 
-    <TextView
+    <Button
         android:id="@+id/text1"
         android:layout_width="122dp"
         android:layout_height="75dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#FAFAFA"
+        style="?android:attr/borderlessButtonStyle"
+        android:gravity="center"
         android:fontFamily="serif"
-        android:gravity="center_horizontal"
         android:text="1"
         android:textSize="35sp"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/text2"
         app:layout_constraintTop_toTopOf="@+id/text2"
-        app:layout_constraintHorizontal_bias="1.0"
-        android:layout_marginStart="8dp" />
+        android:layout_marginTop="-3dp" />
 
-    <TextView
+    <Button
         android:id="@+id/text2"
         android:layout_width="122dp"
         android:layout_height="75dp"
         android:fontFamily="serif"
-        android:gravity="center_horizontal"
+        android:background="#FAFAFA"
+        style="?android:attr/borderlessButtonStyle"
+        android:gravity="center"
         android:text="2"
         android:textSize="35sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -135,13 +146,15 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="190dp" />
 
-    <TextView
+    <Button
         android:id="@+id/text3"
         android:layout_width="121dp"
         android:layout_height="75dp"
         android:layout_marginRight="8dp"
         android:fontFamily="serif"
-        android:gravity="center_horizontal"
+        android:background="#FAFAFA"
+        style="?android:attr/borderlessButtonStyle"
+        android:gravity="center"
         android:text="3"
         android:textSize="35sp"
         app:layout_constraintLeft_toRightOf="@+id/text2"
@@ -149,36 +162,42 @@
         app:layout_constraintTop_toTopOf="@+id/text2"
         android:layout_marginEnd="8dp" />
 
-    <TextView
+    <Button
         android:id="@+id/text8"
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:fontFamily="serif"
-        android:gravity="center_horizontal"
+        android:background="#FAFAFA"
+        style="?android:attr/borderlessButtonStyle"
+        android:gravity="center"
         android:text="8"
         android:textSize="35sp"
         app:layout_constraintTop_toBottomOf="@+id/text5"
         app:layout_constraintRight_toRightOf="@+id/text2"
         app:layout_constraintLeft_toLeftOf="@+id/text2" />
 
-    <TextView
+    <Button
         android:id="@+id/text0"
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:fontFamily="serif"
-        android:gravity="center_horizontal"
+        android:background="#FAFAFA"
+        style="?android:attr/borderlessButtonStyle"
+        android:gravity="center"
         android:text="0"
         android:textSize="35sp"
         app:layout_constraintTop_toBottomOf="@+id/text8"
         app:layout_constraintRight_toLeftOf="@+id/text9"
         app:layout_constraintLeft_toRightOf="@+id/text7" />
 
-    <TextView
+    <Button
         android:id="@+id/text9"
         android:layout_width="122dp"
         android:layout_height="80dp"
         android:fontFamily="serif"
-        android:gravity="center_horizontal"
+        android:background="#FAFAFA"
+        style="?android:attr/borderlessButtonStyle"
+        android:gravity="center"
         android:text="9"
         android:textSize="35sp"
         app:layout_constraintLeft_toLeftOf="@+id/text6"
@@ -187,25 +206,29 @@
 
     <ImageButton
         android:id="@+id/textGo"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="0dp"
         android:layout_height="80dp"
+        android:background="#FAFAFA"
         android:fontFamily="serif"
-        android:gravity="center_horizontal"
-        android:src="@drawable/next"
+        android:gravity="center"
         android:scaleType="centerInside"
+        android:src="@drawable/next"
         android:text="9"
         android:textSize="35sp"
-        android:visibility="visible"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@+id/text9"
         app:layout_constraintRight_toRightOf="@+id/text9"
-        app:layout_constraintTop_toBottomOf="@+id/text9"
-        app:layout_constraintLeft_toLeftOf="@+id/text9" />
+        app:layout_constraintTop_toBottomOf="@+id/text9" />
 
-    <TextView
+    <Button
         android:id="@+id/text7"
         android:layout_width="122dp"
         android:layout_height="80dp"
         android:fontFamily="serif"
-        android:gravity="center_horizontal"
+        android:background="#FAFAFA"
+        style="?android:attr/borderlessButtonStyle"
+        android:gravity="center"
         android:text="7"
         android:textSize="35sp"
         app:layout_constraintTop_toBottomOf="@+id/text4"
@@ -214,14 +237,17 @@
 
     <ImageButton
         android:id="@+id/textClearLast"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="122dp"
         android:layout_height="80dp"
+        android:background="#FAFAFA"
         android:fontFamily="serif"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:scaleType="centerInside"
         android:src="@drawable/backspace"
         android:text="7"
         android:textSize="35sp"
+        android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="@+id/text7"
         app:layout_constraintRight_toLeftOf="@+id/text0"
         app:layout_constraintTop_toBottomOf="@+id/text7" />
