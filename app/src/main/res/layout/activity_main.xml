@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="morningpages.app.niklas.morningpages.MainActivity">
+    tools:context="morningpages.app.niklas.morningpages.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
 
     <!-- TODO Ok Button erst anzeigen, wenn Mind. eine Zahl (außer der Null) -->
 
@@ -12,22 +14,12 @@
         android:id="@+id/text4"
         android:layout_width="0dp"
         android:layout_height="80dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginRight="19dp"
-        android:layout_marginStart="18dp"
         android:fontFamily="serif"
         android:gravity="center_horizontal"
         android:text="4"
         android:textSize="35sp"
-        app:layout_constraintBottom_toTopOf="@+id/text7"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="@+id/currSingleHours"
-        app:layout_constraintTop_toBottomOf="@+id/text1"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
+        tools:layout_editor_absoluteY="183dp"
+        tools:layout_editor_absoluteX="18dp" />
 
     <TextView
         android:id="@+id/text5"
@@ -38,8 +30,7 @@
         android:text="5"
         android:textSize="35sp"
         tools:layout_editor_absoluteX="121dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/text2" />
+        tools:layout_editor_absoluteY="184dp" />
 
     <TextView
         android:id="@+id/text6"
@@ -49,12 +40,8 @@
         android:gravity="center_horizontal"
         android:text="6"
         android:textSize="35sp"
-        app:layout_constraintLeft_toLeftOf="@+id/text3"
-        app:layout_constraintRight_toRightOf="@+id/text3"
-        app:layout_constraintTop_toBottomOf="@+id/text3"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_editor_absoluteY="176dp"
+        tools:layout_editor_absoluteX="141dp" />
 
     <TextView
         android:id="@+id/labelHours"
@@ -65,12 +52,8 @@
         android:textSize="15sp"
         android:paddingLeft="2dp"
         android:paddingBottom="6dp"
-        android:layout_marginStart="1dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/currSingleHours"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toRightOf="@+id/currSingleHours"
-        android:layout_marginLeft="1dp" />
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <TextView
         android:id="@+id/currTenMinutes"
@@ -79,10 +62,11 @@
         android:fontFamily="serif"
         android:text="0"
         android:textSize="35sp"
-        app:layout_constraintRight_toLeftOf="@+id/currSingleMinutes"
-        app:layout_constraintLeft_toRightOf="@+id/labelHours"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="20dp"
+        app:layout_constraintHorizontal_bias="0.502" />
 
     <TextView
         android:id="@+id/currTenSeconds"
@@ -91,12 +75,8 @@
         android:fontFamily="serif"
         android:text="0"
         android:textSize="35sp"
-        android:layout_marginStart="15dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/currSingleSeconds"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toRightOf="@+id/labelMinutes"
-        android:layout_marginLeft="15dp" />
+        tools:layout_editor_absoluteY="53dp"
+        tools:layout_editor_absoluteX="308dp" />
 
     <TextView
         android:id="@+id/currSingleHours"
@@ -105,25 +85,18 @@
         android:fontFamily="serif"
         android:text="0"
         android:textSize="35sp"
-        tools:layout_constraintTop_creator="1"
-        android:layout_marginTop="15dp"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/currTenHours" />
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="29dp" />
 
     <TextView
         android:id="@+id/currTenHours"
-        android:layout_width="wrap_content"
+        android:layout_width="20dp"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
         android:text="0"
         android:textSize="35sp"
-        android:layout_marginStart="100dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/currSingleHours"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="100dp" />
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="64dp" />
 
     <TextView
         android:id="@+id/text1"
@@ -133,32 +106,19 @@
         android:gravity="center_horizontal"
         android:text="1"
         android:textSize="35sp"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/text4"
-        app:layout_constraintBaseline_toBaselineOf="@+id/text2"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/text4" />
+        tools:layout_editor_absoluteY="101dp"
+        tools:layout_editor_absoluteX="18dp" />
 
     <TextView
         android:id="@+id/text2"
         android:layout_width="135dp"
         android:layout_height="75dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginLeft="101dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="33dp"
         android:fontFamily="serif"
         android:gravity="center_horizontal"
         android:text="2"
         android:textSize="35sp"
-        app:layout_constraintLeft_toRightOf="@+id/text1"
-        app:layout_constraintRight_toLeftOf="@+id/text3"
-        app:layout_constraintTop_toBottomOf="@+id/currSingleMinutes"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_editor_absoluteY="108dp"
+        tools:layout_editor_absoluteX="38dp" />
 
     <TextView
         android:id="@+id/text3"
@@ -168,14 +128,8 @@
         android:gravity="center_horizontal"
         android:text="3"
         android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="@+id/text2"
-        app:layout_constraintLeft_toRightOf="@+id/text5"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text2"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_editor_absoluteY="101dp"
+        tools:layout_editor_absoluteX="141dp" />
 
     <TextView
         android:id="@+id/text8"
@@ -185,12 +139,8 @@
         android:gravity="center_horizontal"
         android:text="8"
         android:textSize="35sp"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="@+id/text5"
-        app:layout_constraintRight_toRightOf="@+id/text5"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_editor_absoluteY="251dp" />
+        tools:layout_editor_absoluteY="251dp"
+        tools:layout_editor_absoluteX="121dp" />
 
     <TextView
         android:id="@+id/text0"
@@ -200,12 +150,8 @@
         android:gravity="center_horizontal"
         android:text="0"
         android:textSize="35sp"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="@+id/text5"
-        app:layout_constraintRight_toRightOf="@+id/text5"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_editor_absoluteY="331dp" />
+        tools:layout_editor_absoluteY="331dp"
+        tools:layout_editor_absoluteX="121dp" />
 
     <TextView
         android:id="@+id/text9"
@@ -215,19 +161,13 @@
         android:gravity="center_horizontal"
         android:text="9"
         android:textSize="35sp"
-        app:layout_constraintRight_toRightOf="@+id/text6"
-        app:layout_constraintTop_toBottomOf="@+id/text6"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        app:layout_constraintLeft_toRightOf="@+id/text8"
-        app:layout_constraintHorizontal_bias="0.0" />
+        tools:layout_editor_absoluteY="256dp"
+        tools:layout_editor_absoluteX="141dp" />
 
     <ImageButton
         android:id="@+id/textGo"
         android:layout_width="0dp"
         android:layout_height="80dp"
-        android:layout_marginTop="80dp"
         android:fontFamily="serif"
         android:gravity="center_horizontal"
         android:src="@drawable/next"
@@ -235,13 +175,8 @@
         android:text="9"
         android:textSize="35sp"
         android:visibility="visible"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/text6"
-        app:layout_constraintRight_toRightOf="@+id/text6"
-        app:layout_constraintTop_toBottomOf="@+id/text6"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_editor_absoluteY="336dp"
+        tools:layout_editor_absoluteX="141dp" />
 
     <TextView
         android:id="@+id/text7"
@@ -251,35 +186,21 @@
         android:gravity="center_horizontal"
         android:text="7"
         android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="@+id/text8"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/text4"
-        app:layout_constraintRight_toRightOf="@+id/text4"
-        app:layout_constraintTop_toBottomOf="@+id/text5"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_editor_absoluteY="264dp"
+        tools:layout_editor_absoluteX="18dp" />
 
     <ImageButton
         android:id="@+id/textClearLast"
         android:layout_width="105dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
         android:fontFamily="serif"
         android:gravity="center_horizontal"
         android:scaleType="centerInside"
         android:src="@drawable/backspace"
         android:text="7"
         android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="@+id/text0"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/text7"
-        app:layout_constraintRight_toLeftOf="@+id/text0"
-        app:layout_constraintTop_toBottomOf="@+id/text7"
-        app:layout_constraintVertical_bias="0.333" />
+        tools:layout_editor_absoluteY="334dp"
+        tools:layout_editor_absoluteX="18dp" />
 
     <TextView
         android:id="@+id/currSingleMinutes"
@@ -288,11 +209,10 @@
         android:fontFamily="serif"
         android:text="0"
         android:textSize="35sp"
-        android:layout_marginStart="1dp"
-        app:layout_constraintLeft_toRightOf="@+id/currTenMinutes"
-        android:layout_marginLeft="-1dp"
         app:layout_constraintTop_toTopOf="@+id/currTenMinutes"
-        android:layout_marginTop="0dp" />
+        android:layout_marginTop="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/currTenMinutes"
+        android:layout_marginLeft="0dp" />
 
     <TextView
         android:id="@+id/currSingleSeconds"
@@ -301,12 +221,8 @@
         android:fontFamily="serif"
         android:text="0"
         android:textSize="35sp"
-        android:layout_marginStart="1dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/currentSeconds"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toRightOf="@+id/currTenSeconds"
-        android:layout_marginLeft="1dp" />
+        tools:layout_editor_absoluteY="53dp"
+        tools:layout_editor_absoluteX="328dp" />
 
     <TextView
         android:id="@+id/labelMinutes"
@@ -318,9 +234,9 @@
         android:paddingBottom="6dp"
         android:textSize="15sp"
         app:layout_constraintLeft_toRightOf="@+id/currSingleMinutes"
+        android:layout_marginLeft="-1dp"
         app:layout_constraintTop_toTopOf="@+id/currSingleMinutes"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="21dp" />
 
     <TextView
         android:id="@+id/currentSeconds"
@@ -331,9 +247,6 @@
         android:paddingLeft="2dp"
         android:text="s"
         android:textSize="15sp"
-        tools:layout_constraintTop_creator="1"
-        android:layout_marginTop="36dp"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/currSingleSeconds" />
+        tools:layout_editor_absoluteY="68dp"
+        tools:layout_editor_absoluteX="348dp" />
 </android.support.constraint.ConstraintLayout>
