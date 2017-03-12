@@ -1,7 +1,6 @@
 package morningpages.app.niklas.morningpages
 
 import android.app.Activity
-import android.content.Context
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**

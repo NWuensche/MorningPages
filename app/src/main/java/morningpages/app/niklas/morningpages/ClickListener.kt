@@ -1,7 +1,9 @@
 package morningpages.app.niklas.morningpages
 
 import android.app.Activity
+import android.app.Application
 import android.content.Context
+import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -10,26 +12,23 @@ import kotlinx.android.synthetic.main.activity_main.*
 object ClickListener {
 
 
-    fun onClickText(context: Context, pressedNum: String) {
-        makeButtonsVisible(context)
-        forwardText(context, pressedNum)
+    fun onClickText(activity: Activity, pressedNum: String) {
+        makeButtonsVisible(activity)
+        forwardText(activity, pressedNum)
     }
 
-    private fun makeButtonsVisible(context: Context) {
-        //v.clearLastNumber.visibility = View.VISIBLE
-        //v.startTimer.visibility = View.VISIBLE
+    private fun makeButtonsVisible(activity: Activity) {
+        activity.deleteLastNumber.visibility = View.VISIBLE
+        activity.startTimer.visibility = View.VISIBLE
     }
 
 
-    private fun forwardText(context: Context, pressedNum: String) {
-        //TODO Ohne activity, einfach kotlinx?
-        val activity = context as Activity
-
-        if(!activity.currTenHours.text.toString().equals("0")) {
-            return
-        }
-
+    private fun forwardText(activity: Activity, pressedNum: String) {
         activity.apply {
+            if(!currTenHours.text.toString().equals("0")) {
+                return
+            }
+
             currTenHours.text = currSingleHours.text
             currSingleHours.text = currTenMinutes.text
 
