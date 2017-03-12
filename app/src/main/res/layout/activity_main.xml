@@ -52,8 +52,10 @@
         android:textSize="15sp"
         android:paddingLeft="2dp"
         android:paddingBottom="6dp"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintRight_toLeftOf="@+id/currTenMinutes"
+        android:layout_marginRight="8dp"
+        app:layout_constraintTop_toTopOf="@+id/labelMinutes"
+        android:layout_marginTop="0dp" />
 
     <TextView
         android:id="@+id/currTenMinutes"
@@ -66,7 +68,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="20dp"
-        app:layout_constraintHorizontal_bias="0.502" />
+        app:layout_constraintHorizontal_bias="0.44" />
 
     <TextView
         android:id="@+id/currTenSeconds"
@@ -75,8 +77,10 @@
         android:fontFamily="serif"
         android:text="0"
         android:textSize="35sp"
-        tools:layout_editor_absoluteY="53dp"
-        tools:layout_editor_absoluteX="308dp" />
+        app:layout_constraintLeft_toRightOf="@+id/labelMinutes"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintTop_toTopOf="@+id/currTenMinutes"
+        android:layout_marginTop="0dp" />
 
     <TextView
         android:id="@+id/currSingleHours"
@@ -85,8 +89,10 @@
         android:fontFamily="serif"
         android:text="0"
         android:textSize="35sp"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="29dp" />
+        app:layout_constraintRight_toLeftOf="@+id/labelHours"
+        android:layout_marginRight="0dp"
+        app:layout_constraintTop_toTopOf="@+id/currTenMinutes"
+        android:layout_marginTop="0dp" />
 
     <TextView
         android:id="@+id/currTenHours"
@@ -95,8 +101,10 @@
         android:fontFamily="serif"
         android:text="0"
         android:textSize="35sp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:layout_editor_absoluteX="64dp" />
+        app:layout_constraintRight_toLeftOf="@+id/currSingleHours"
+        android:layout_marginRight="0dp"
+        app:layout_constraintTop_toTopOf="@+id/currTenMinutes"
+        android:layout_marginTop="0dp" />
 
     <TextView
         android:id="@+id/text1"
@@ -221,8 +229,10 @@
         android:fontFamily="serif"
         android:text="0"
         android:textSize="35sp"
-        tools:layout_editor_absoluteY="53dp"
-        tools:layout_editor_absoluteX="328dp" />
+        app:layout_constraintLeft_toRightOf="@+id/currTenSeconds"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintTop_toTopOf="@+id/currTenSeconds"
+        android:layout_marginTop="0dp" />
 
     <TextView
         android:id="@+id/labelMinutes"
@@ -247,6 +257,8 @@
         android:paddingLeft="2dp"
         android:text="s"
         android:textSize="15sp"
-        tools:layout_editor_absoluteY="68dp"
-        tools:layout_editor_absoluteX="348dp" />
+        app:layout_constraintTop_toTopOf="@+id/labelMinutes"
+        android:layout_marginTop="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/currSingleSeconds"
+        android:layout_marginLeft="0dp" />
 </android.support.constraint.ConstraintLayout>
