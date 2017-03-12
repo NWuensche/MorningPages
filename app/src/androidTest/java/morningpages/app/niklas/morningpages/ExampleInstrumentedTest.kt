@@ -25,7 +25,7 @@ class ExampleInstrumentedTest : SuperEspresso() {
     @Test
     fun espressoTest() {
         onView(withId(R.id.text1)).perform(click())
-        onView(withId(R.id.currSingleSeconds)).check(matches(withText("0")))
+        onView(withId(R.id.currSingleSeconds)).check(matches(withText("1")))
     }
 
 }
