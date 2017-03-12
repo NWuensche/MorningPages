@@ -14,12 +14,30 @@ import org.junit.Test
 class CurrTimeTest : SuperEspresso() {
 
     @Test
-    fun clickRight() {
-        onView(withId(R.id.text1)).perform(click())
+    fun clickOnceRight() {
+        clickOne(1)
         assertThat(CurrTime.getCurrentTime(activity.activity), `is`("00:00:01"))
 
         onView(withId(R.id.startTimer)).check(matches(isDisplayed()))
         onView(withId(R.id.deleteLastNumber)).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun clickSevenTimesRight() {
+        clickOne(6)
+        onView(withId(R.id.text2)).perform(click())
+        assertThat(CurrTime.getCurrentTime(activity.activity), `is`("11:11:11"))
+
+        onView(withId(R.id.startTimer)).check(matches(isDisplayed()))
+        onView(withId(R.id.deleteLastNumber)).check(matches(isDisplayed()))
+    }
+
+    private fun clickOne(times: Int) {
+        var often = times
+        while(often > 0) {
+            onView(withId(R.id.text1)).perform(click())
+            often--
+        }
     }
 
 }
