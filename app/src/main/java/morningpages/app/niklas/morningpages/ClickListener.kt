@@ -22,7 +22,6 @@ object ClickListener {
         activity.startTimer.visibility = View.VISIBLE
     }
 
-
     private fun forwardText(activity: Activity, pressedNum: String) {
         activity.apply {
             if(!currTenHours.text.toString().equals("0")) {
@@ -38,6 +37,32 @@ object ClickListener {
             currTenSeconds.text = currSingleSeconds.text
             currSingleSeconds.text = pressedNum
         }
+    }
+
+    fun onClickDelete(activity: Activity) {
+        backwardText(activity)
+
+        if(CurrTime.getCurrentTime(activity).equals("00:00:00")) {
+            makeButtonsInvisible(activity)
+        }
+    }
+
+    private fun backwardText(activity: Activity) {
+        activity.apply {
+            currSingleSeconds.text = currTenSeconds.text
+            currTenSeconds.text = currSingleMinutes.text
+
+            currSingleMinutes.text = currTenMinutes.text
+            currTenMinutes.text = currSingleHours.text
+
+            currSingleHours.text = currTenHours.text
+            currTenHours.text = "0"
+        }
+    }
+
+    private fun makeButtonsInvisible(activity: Activity) {
+        activity.deleteLastNumber.visibility = View.INVISIBLE
+        activity.startTimer.visibility = View.INVISIBLE
     }
 
 }

@@ -22,6 +22,9 @@ class MainActivity : AppCompatActivity() {
         text7.setOnClickListener { _ -> ClickListener.onClickText(self, "7") }
         text8.setOnClickListener { _ -> ClickListener.onClickText(self, "8") }
         text9.setOnClickListener { _ -> ClickListener.onClickText(self, "9") }
+
+        deleteLastNumber.setOnClickListener { _ -> ClickListener.onClickDelete(self) }
+        startTimer.setOnClickListener { _ -> TODO("Start here!") }
     }
 
 }
