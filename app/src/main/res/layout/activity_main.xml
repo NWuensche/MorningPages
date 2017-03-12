@@ -253,6 +253,8 @@
         app:layout_constraintTop_toBottomOf="@+id/text7" />
 
     <!-- TODO Is invisble enought, can't I press button? -->
+    <!-- TODO Nice Animation when Button become visible and invisible? -->
+    <!-- TODO Is button onClick animation (like default when I use backgroundTInt) -->
 
     <TextView
         android:id="@+id/currSingleMinutes"
