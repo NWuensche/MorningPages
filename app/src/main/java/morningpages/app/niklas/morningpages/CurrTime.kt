@@ -2,7 +2,6 @@ package morningpages.app.niklas.morningpages
 
 import android.app.Activity
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -10,23 +9,17 @@ import kotlinx.android.synthetic.main.activity_main.*
  */
 object CurrTime {
 
-    fun getCurrentTime(context: Context): String {
+    fun getCurrentTime(activity: Activity): String {
+        val tenHours = activity.currTenHours.text.toString()
+        val singleHours = activity.currSingleHours.text.toString()
 
-        (context as Activity).apply {
-            val tenHours = currTenHours.text.toString()
-            val singleHours = currSingleHours.text.toString()
+        val tenMinutes = activity.currTenMinutes.text.toString()
+        val singleMinutes = activity.currSingleMinutes.text.toString()
 
-            val tenMinutes = currTenMinutes.text.toString()
-            val singleMinutes = currSingleMinutes.text.toString()
+        val tenSeconds = activity.currTenSeconds.text.toString()
+        val singleSeconds = activity.currSingleSeconds.text.toString()
 
-            val tenSeconds = currTenSeconds.text.toString()
-            val singleSeconds = currSingleSeconds.text.toString()
-
-            return "$tenHours$singleHours:$tenMinutes$singleMinutes:$tenSeconds$singleSeconds"
-        }
-
-        // Will never be used
-        return ""
+        return "$tenHours$singleHours:$tenMinutes$singleMinutes:$tenSeconds$singleSeconds"
     }
 
 }

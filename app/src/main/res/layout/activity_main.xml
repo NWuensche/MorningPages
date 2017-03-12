@@ -252,6 +252,8 @@
         app:layout_constraintRight_toLeftOf="@+id/text0"
         app:layout_constraintTop_toBottomOf="@+id/text7" />
 
+    <!-- TODO Is invisble enought, can't I press button? -->
+
     <TextView
         android:id="@+id/currSingleMinutes"
         android:layout_width="wrap_content"
