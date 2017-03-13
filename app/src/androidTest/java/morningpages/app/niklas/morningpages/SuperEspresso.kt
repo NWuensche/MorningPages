@@ -12,6 +12,6 @@ import org.junit.runner.RunWith
  */
 @RunWith(AndroidJUnit4::class)
 abstract class SuperEspresso {
-    @Rule @JvmField val activity = ActivityTestRule<MainActivity>(MainActivity::class.java)
+    @Rule @JvmField val activity = ActivityTestRule<TimerActivity>(TimerActivity::class.java)
     val appContext: Context = InstrumentationRegistry.getTargetContext()
 }
