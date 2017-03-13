@@ -5,6 +5,10 @@ import android.app.Application
 import android.content.Context
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
+import android.support.v4.content.ContextCompat.startActivity
+import android.content.Intent
+
+
 
 /**
  * @author nwuensche
@@ -63,6 +67,13 @@ object ClickListener {
     private fun makeButtonsInvisible(activity: Activity) {
         activity.deleteLastNumber.visibility = View.INVISIBLE
         activity.startTimer.visibility = View.INVISIBLE
+    }
+
+    fun switchToWriteActivity(activity: Activity) {
+        val intent: Intent = Intent(activity, WriteActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        intent.putExtra("testString", "test")
+        activity.startActivity(intent)
     }
 
 }

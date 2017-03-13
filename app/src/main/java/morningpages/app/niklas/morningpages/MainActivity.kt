@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         text9.setOnClickListener { _ -> ClickListener.onClickText(self, "9") }
 
         deleteLastNumber.setOnClickListener { _ -> ClickListener.onClickDelete(self) }
-        startTimer.setOnClickListener { _ -> TODO("Start here!") }
+        startTimer.setOnClickListener { _ -> ClickListener.switchToWriteActivity(self) }
     }
 
 }
