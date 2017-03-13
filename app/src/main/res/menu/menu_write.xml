@@ -6,8 +6,7 @@
     <item
         android:id="@+id/action_save_today"
         android:orderInCategory="100"
-        android:title="Save Entry"
-        android:icon="@android:drawable/ic_menu_save"
+        android:title=""
         app:showAsAction="always" />
 
 </menu>
