@@ -1,12 +1,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="journal.app.niklas.a5minutejournal.MainActivity">
+    tools:context="journal.app.niklas.a5minutejournal.WriteActivity">
 
     <item
-        android:id="@+id/action_save_today"
+        android:id="@+id/show_timer"
         android:orderInCategory="100"
-        android:title=""
+        android:title="00:00:00"
         app:showAsAction="always" />
 
 </menu>

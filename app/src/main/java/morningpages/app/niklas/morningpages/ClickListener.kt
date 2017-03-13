@@ -72,7 +72,7 @@ object ClickListener {
     fun switchToWriteActivity(activity: Activity) {
         val intent: Intent = Intent(activity, WriteActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        intent.putExtra("testString", "test")
+        intent.putExtra("time", CurrTime.getCurrentTime(activity)) //TODO 00:90:00 -> 01:30:00
         activity.startActivity(intent)
     }
 

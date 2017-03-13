@@ -4,8 +4,7 @@ import android.content.Context
 import android.support.test.espresso.Espresso.onView
 import android.support.test.espresso.action.ViewActions.click
 import android.support.test.espresso.assertion.ViewAssertions.matches
-import android.support.test.espresso.matcher.ViewMatchers.isDisplayed
-import android.support.test.espresso.matcher.ViewMatchers.withId
+import android.support.test.espresso.matcher.ViewMatchers.*
 import android.view.inputmethod.InputMethodManager
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
@@ -31,6 +30,7 @@ class WriteTests : SuperEspresso() {
         assertThat(inputManager.isAcceptingText, `is`(true))
 
         onView(withId(R.id.writeText)).check(matches(isDisplayed()))
+        onView(withId(R.id.show_timer)).check(matches(withText("00:00:01")))
     }
 
 }
