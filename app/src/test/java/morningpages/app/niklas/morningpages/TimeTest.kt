@@ -15,6 +15,14 @@ class TimeTest {
     @Test
     @Throws(Exception::class)
     fun formatTimeAndCreateListRight() {
+        val list = CurrTime.formatTimeAndCreateList("00:60:00")
+
+        assertThat(list.size, `is`(61))
+        assertThat(list[0], `is`("00:01:00"))
+        assertThat(list[1], `is`("00:00:59"))
+        assertThat(list[59], `is`("00:00:01"))
+        assertThat(list[60], `is`("00:00:00"))
+
         val longList = CurrTime.formatTimeAndCreateList("99:99:99")
 
         assertThat(longList.size, `is`(362440))
@@ -22,6 +30,7 @@ class TimeTest {
         assertThat(longList[362438], `is`("00:00:01"))
         assertThat(longList[362439], `is`("00:00:00"))
         //TODO Ist dieser Ansatz zu langsam fürs Handy? Probiere mit 99:99:99, wie lange übergang zu anderer Acitivty bruacht
+        //TODO Sonst Update machen, wo das schneller gemacht wird. Nicht Time objecte, sondern einfach Zahlen
     }
 
 }
