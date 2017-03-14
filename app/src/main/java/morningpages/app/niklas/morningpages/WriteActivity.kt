@@ -1,9 +1,11 @@
 package morningpages.app.niklas.morningpages
 
+import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.view.menu.ActionMenuItemView
 import android.view.Menu
+import android.view.inputmethod.InputMethodManager
 import rx.android.schedulers.AndroidSchedulers
 import rx.subjects.PublishSubject
 
@@ -27,8 +29,17 @@ class WriteActivity : AppCompatActivity() {
         PublishSubject.interval(1, java.util.concurrent.TimeUnit.SECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
                 .take(times.size)
-                .subscribe({item.text = times[it.toInt()]}, {}, {item.text = "Fertig"})
+                .subscribe({item.text = times[it.toInt()]}, {}, {onCompleted()})
 
         super.onWindowFocusChanged(hasFocus)
     }
+
+    private fun onCompleted() {
+        val item = findViewById(R.id.show_timer) as ActionMenuItemView
+        item.text = "Fertig"
+
+        val inputManager = applicationContext.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputManager.hideSoftInputFromWindow(item.windowToken, 0)
+    }
+
 }

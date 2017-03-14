@@ -46,6 +46,7 @@ class WriteTests : SuperEspresso() {
 
         Thread.sleep(4000)
         onView(withId(R.id.show_timer)).check(matches(withText("Fertig")))
+        //TODO Wie test, das Soft Keyboard weg ist?
     }
 
     /**
@@ -57,6 +58,9 @@ class WriteTests : SuperEspresso() {
     }
 
     private fun testIfMorningPageIsMultiThreadWriteable() {
+        val inputManager = appContext.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        assertThat(inputManager.isAcceptingText, `is`(true))
+
         onView(withId(R.id.writeText)).perform(typeText("Test"))
         onView(withId(R.id.writeText)).check(matches(withText(("Test"))))
     }
