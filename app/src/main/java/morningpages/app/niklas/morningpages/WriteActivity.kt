@@ -9,6 +9,7 @@ import android.view.inputmethod.InputMethodManager
 import rx.android.schedulers.AndroidSchedulers
 import rx.subjects.PublishSubject
 
+
 class WriteActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +19,7 @@ class WriteActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_write, menu)
-        menu!!.findItem(R.id.show_timer).title = intent.extras.getString("time")
+        menu!!.findItem(R.id.show_timer).title = CurrTime.formatTime(intent.extras.getString("time")).toString() // TODO Test -> 00:60:00 -> 00:01:00
         return super.onCreateOptionsMenu(menu)
     }
 

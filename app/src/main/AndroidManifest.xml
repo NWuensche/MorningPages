@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".WriteActivity"
-            android:windowSoftInputMode="stateVisible"
+            android:windowSoftInputMode="adjustResize"
             ></activity>
     </application>
 

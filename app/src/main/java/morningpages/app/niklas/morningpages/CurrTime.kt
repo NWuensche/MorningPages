@@ -27,7 +27,7 @@ object CurrTime {
 
     }
 
-    private fun formatTime(time: String): Time {
+    fun formatTime(time: String): Time {
         val newSingleSeconds = Integer.parseInt(time[7].toString())
 
         val newTenSeconds = Integer.parseInt(time[6].toString()) % 6
