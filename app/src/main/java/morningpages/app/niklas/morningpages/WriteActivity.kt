@@ -23,7 +23,7 @@ class WriteActivity : AppCompatActivity() {
     //TODO First time, not other times.
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         val item = findViewById(R.id.show_timer) as ActionMenuItemView
-        val times = CurrTime.formatTimeAndCreateList(intent.extras.getString("time"))
+        val times = CurrTime.formatTimeAndCreateList(intent.extras.getString("time")).drop(1) // Takes some time, so start with already ticked
         PublishSubject.interval(1, java.util.concurrent.TimeUnit.SECONDS)
                 .observeOn(AndroidSchedulers.mainThread())
                 .take(times.size)
