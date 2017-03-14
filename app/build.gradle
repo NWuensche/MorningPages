@@ -47,7 +47,7 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     testCompile 'junit:junit:4.12'
 
-    compile 'io.reactivex:rxkotlin:1.0.0-RC2'
+    compile 'io.reactivex:rxandroid:1.2.1'
 }
 repositories {
     mavenCentral()
