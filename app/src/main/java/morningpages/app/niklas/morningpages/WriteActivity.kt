@@ -43,4 +43,8 @@ class WriteActivity : AppCompatActivity() {
         inputManager.hideSoftInputFromWindow(item.windowToken, 0)
     }
 
+    override fun onBackPressed() {
+        return
+    }
+    
 }
