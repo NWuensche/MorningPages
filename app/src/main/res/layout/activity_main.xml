@@ -8,8 +8,6 @@
     tools:layout_editor_absoluteY="81dp"
     tools:layout_editor_absoluteX="0dp">
 
-    <!-- TODO Ok Button erst anzeigen, wenn Mind. eine Zahl (außer der Null) -->
-
     <Button
         android:id="@+id/text4"
         android:layout_width="0dp"
@@ -240,7 +238,6 @@
         app:layout_constraintRight_toLeftOf="@+id/text0"
         app:layout_constraintTop_toBottomOf="@+id/text7" />
 
-    <!-- TODO Is invisble enought, can't I press button? -->
     <!-- TODO Nice Animation when Button become visible and invisible? -->
     <!-- TODO Is button onClick animation (like default when I use backgroundTInt) -->
 

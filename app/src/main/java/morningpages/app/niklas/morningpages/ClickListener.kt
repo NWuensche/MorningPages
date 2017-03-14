@@ -17,8 +17,11 @@ object ClickListener {
 
 
     fun onClickText(activity: Activity, pressedNum: String) {
-        makeButtonsVisible(activity)
         forwardText(activity, pressedNum)
+
+        if(CurrTime.getCurrentTime(activity) != "00:00:00") { // Zero was pressed at first
+            makeButtonsVisible(activity)
+        }
     }
 
     private fun makeButtonsVisible(activity: Activity) {
@@ -72,7 +75,7 @@ object ClickListener {
     fun switchToWriteActivity(activity: Activity) {
         val intent: Intent = Intent(activity, WriteActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        intent.putExtra("time", CurrTime.getCurrentTime(activity)) //TODO 00:90:00 -> 01:30:00
+        intent.putExtra("time", CurrTime.getCurrentTime(activity))
         activity.startActivity(intent)
     }
 

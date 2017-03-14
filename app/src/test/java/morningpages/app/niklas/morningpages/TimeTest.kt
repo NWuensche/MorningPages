@@ -29,8 +29,7 @@ class TimeTest {
         assertThat(longList[0], `is`("100:40:39"))
         assertThat(longList[362438], `is`("00:00:01"))
         assertThat(longList[362439], `is`("00:00:00"))
-        //TODO Ist dieser Ansatz zu langsam fürs Handy? Probiere mit 99:99:99, wie lange übergang zu anderer Acitivty bruacht
-        //TODO Sonst Update machen, wo das schneller gemacht wird. Nicht Time objecte, sondern einfach Zahlen
+        //TODO Update machen, wo das schneller gemacht wird. Nicht Time objecte, sondern einfach Zahlen, da bei 99:99:99 harter Delay
     }
 
 }

@@ -12,6 +12,8 @@ import rx.subjects.PublishSubject
 
 class WriteActivity : AppCompatActivity() {
 
+    var firstTime = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_write)
@@ -19,18 +21,21 @@ class WriteActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_write, menu)
-        menu!!.findItem(R.id.show_timer).title = CurrTime.formatTime(intent.extras.getString("time")).toString() // TODO Test -> 00:60:00 -> 00:01:00
+        menu!!.findItem(R.id.show_timer).title = CurrTime.formatTime(intent.extras.getString("time")).toString()
         return super.onCreateOptionsMenu(menu)
     }
 
-    //TODO First time, not other times.
     override fun onWindowFocusChanged(hasFocus: Boolean) {
-        val item = findViewById(R.id.show_timer) as ActionMenuItemView
-        val times = CurrTime.formatTimeAndCreateList(intent.extras.getString("time")).drop(1) // Takes some time, so start with already ticked
-        PublishSubject.interval(1, java.util.concurrent.TimeUnit.SECONDS)
-                .observeOn(AndroidSchedulers.mainThread())
-                .take(times.size)
-                .subscribe({item.text = times[it.toInt()]}, {}, {onCompleted()})
+        if(firstTime) {
+            val item = findViewById(R.id.show_timer) as ActionMenuItemView
+            val times = CurrTime.formatTimeAndCreateList(intent.extras.getString("time")).drop(1) // Takes some time, so start with already ticked
+            PublishSubject.interval(1, java.util.concurrent.TimeUnit.SECONDS)
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .take(times.size)
+                    .subscribe({item.text = times[it.toInt()]}, {}, {onCompleted()})
+
+            firstTime = false
+        }
 
         super.onWindowFocusChanged(hasFocus)
     }
@@ -46,5 +51,5 @@ class WriteActivity : AppCompatActivity() {
     override fun onBackPressed() {
         return
     }
-    
+
 }

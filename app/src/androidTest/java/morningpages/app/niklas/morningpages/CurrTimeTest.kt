@@ -47,6 +47,10 @@ class CurrTimeTest : SuperEspresso() {
         onView(withId(R.id.deleteLastNumber)).check(matches(not(isDisplayed())))
         onView(withId(R.id.startTimer)).check(matches(not(isDisplayed())))
 
+        onView(withId(R.id.text0)).perform(click())
+        onView(withId(R.id.deleteLastNumber)).check(matches(not(isDisplayed())))
+        onView(withId(R.id.startTimer)).check(matches(not(isDisplayed())))
+
         clickOne(6)
         assertThat(CurrTime.getCurrentTime(activity.activity), `is`("11:11:11"))
         onView(withId(R.id.deleteLastNumber)).check(matches(isDisplayed()))

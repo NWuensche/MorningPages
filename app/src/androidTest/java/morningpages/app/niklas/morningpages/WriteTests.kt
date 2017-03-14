@@ -2,8 +2,7 @@ package morningpages.app.niklas.morningpages
 
 import android.content.Context
 import android.support.test.espresso.Espresso.onView
-import android.support.test.espresso.action.ViewActions.click
-import android.support.test.espresso.action.ViewActions.typeText
+import android.support.test.espresso.action.ViewActions.*
 import android.support.test.espresso.assertion.ViewAssertions.matches
 import android.support.test.espresso.matcher.ViewMatchers.*
 import android.view.inputmethod.InputMethodManager
@@ -19,7 +18,6 @@ class WriteTests : SuperEspresso() {
 
     @Test
     fun startButtonOnTimerWorks() {
-        //TODO Nutze das, um StoppUhr zu testen:     SystemClock.sleep(500);
         val inputManager = appContext.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
 
         onView(withId(R.id.text1)).check(matches(isDisplayed()))
@@ -46,7 +44,6 @@ class WriteTests : SuperEspresso() {
 
         Thread.sleep(4000)
         onView(withId(R.id.show_timer)).check(matches(withText("Fertig")))
-        //TODO Wie test, das Soft Keyboard weg ist?
     }
 
     /**
@@ -63,6 +60,25 @@ class WriteTests : SuperEspresso() {
 
         onView(withId(R.id.writeText)).perform(typeText("Test"))
         onView(withId(R.id.writeText)).check(matches(withText(("Test"))))
+    }
+
+    @Test
+    fun backButtonDoesNothing() {
+        switchToWriteActivty()
+        onView(isRoot()).perform(pressBack()) // close Keyboard
+        onView(isRoot()).perform(pressBack())
+
+        onView(withId(R.id.writeText)).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun showFormatedTimeAtStart() {
+        onView(withId(R.id.text6)).perform(click())
+        onView(withId(R.id.text0)).perform(click())
+
+        onView(withId(R.id.startTimer)).perform(click())
+
+        onView(withId(R.id.show_timer)).check(matches(withText("00:01:00")))
     }
 
 }
