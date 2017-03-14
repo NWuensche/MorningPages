@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="morningpages.app.niklas.morningpages.WriteActivity">
+    tools:context="morningpages.app.niklas.morningpages.WriteActivity"
+    android:background="#EFC5AF">
 
     <EditText
         android:gravity="top"
