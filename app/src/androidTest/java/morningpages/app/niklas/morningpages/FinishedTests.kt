@@ -20,6 +20,14 @@ class FinishedTests : SuperEspresso() {
         onView(withId(R.id.monkeyCage)).check(matches(isDisplayed()))
     }
 
+    fun switchToActivity() {
+        // To Write Activity
+        onView(withId(R.id.text1)).perform(click())
+        onView(withId(R.id.startTimer)).perform(click())
+
+        Thread.sleep(2000) // Until Timer finished
+    }
+
     @Test
     fun backToTimer(){
         switchToActivity()
@@ -51,14 +59,5 @@ class FinishedTests : SuperEspresso() {
 
         onView(withId(R.id.monkeyCage)).check(matches(isDisplayed()))
     }
-
-    fun switchToActivity() {
-        // To Write Activity
-        onView(withId(R.id.text1)).perform(click())
-        onView(withId(R.id.startTimer)).perform(click())
-
-        Thread.sleep(2000) // Until Timer finished
-    }
-
 
 }

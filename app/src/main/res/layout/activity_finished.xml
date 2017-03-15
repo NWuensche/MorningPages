@@ -26,10 +26,11 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="33dp"
         android:fontFamily="serif"
-        android:text="You Caged the Monkey Mind!"
+        android:text="You Caught the Monkey Mind!"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/monkeyCage"
-        android:textSize="25sp"/>
+        android:textSize="23sp"
+        app:layout_constraintHorizontal_bias="0.5" />
 
 </android.support.constraint.ConstraintLayout>

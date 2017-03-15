@@ -15,6 +15,7 @@ import android.content.Intent
  */
 object ClickAndChangeListener {
 
+    var monkeyFree = false
 
     fun onClickText(activity: Activity, pressedNum: String) {
         forwardText(activity, pressedNum)
@@ -83,6 +84,13 @@ object ClickAndChangeListener {
         val intent: Intent = Intent(activity, FinishedActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         activity.startActivity(intent)
+    }
+
+    fun switchToMonkeyFreeActivity(activity: Activity) {
+        val intent: Intent = Intent(activity, MonkeyFreeActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        activity.startActivity(intent)
+        monkeyFree = true
     }
 
 }
