@@ -4,8 +4,11 @@ import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.view.menu.ActionMenuItemView
+import android.util.Log
+import android.view.KeyEvent
 import android.view.Menu
 import android.view.inputmethod.InputMethodManager
+import kotlinx.android.synthetic.main.activity_write.*
 import rx.Observable
 import rx.Subscription
 import rx.android.schedulers.AndroidSchedulers

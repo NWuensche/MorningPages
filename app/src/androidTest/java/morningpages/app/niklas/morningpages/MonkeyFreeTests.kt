@@ -27,7 +27,7 @@ class MonkeyFreeTests : SuperEspresso() {
         onView(withId(R.id.startTimer)).perform(click())
 
         //onView(isRoot()).perform(pressKey(EspressoKey.Builder().withKeyCode()))
-        onView(isRoot()).perform(pressImeActionButton())
+        onView(isRoot()).perform(pressKey(EspressoKey.Builder().withKeyCode(0x0077).build()))
 
         Thread.sleep(2000) // Until Timer finished
     }
