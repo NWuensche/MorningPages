@@ -43,7 +43,7 @@ class WriteTests : SuperEspresso() {
         testIfMorningPageIsMultiThreadWriteable()
 
         Thread.sleep(4000)
-        onView(withId(R.id.show_timer)).check(matches(withText("Fertig")))
+        onView(withId(R.id.monkeyCage)).check(matches(isDisplayed()))
     }
 
     /**

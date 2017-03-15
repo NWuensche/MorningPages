@@ -42,10 +42,12 @@ class WriteActivity : AppCompatActivity() {
 
     private fun onCompleted() {
         val item = findViewById(R.id.show_timer) as ActionMenuItemView
-        item.text = "Fertig"
+        item.text = "00:00:00"
 
         val inputManager = applicationContext.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputManager.hideSoftInputFromWindow(item.windowToken, 0)
+
+        ClickAndChangeListener.switchToFinishedActivity(this)
     }
 
     override fun onBackPressed() {

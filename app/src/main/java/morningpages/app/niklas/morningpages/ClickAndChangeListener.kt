@@ -13,7 +13,7 @@ import android.content.Intent
 /**
  * @author nwuensche
  */
-object ClickListener {
+object ClickAndChangeListener {
 
 
     fun onClickText(activity: Activity, pressedNum: String) {
@@ -76,6 +76,12 @@ object ClickListener {
         val intent: Intent = Intent(activity, WriteActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         intent.putExtra("time", CurrTime.getCurrentTime(activity))
+        activity.startActivity(intent)
+    }
+
+    fun switchToFinishedActivity(activity: Activity) {
+        val intent: Intent = Intent(activity, FinishedActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         activity.startActivity(intent)
     }
 

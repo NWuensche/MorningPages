@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="morningpages.app.niklas.morningpages.Finished">
+    tools:context="morningpages.app.niklas.morningpages.FinishedActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/monkeyCage"
         android:layout_width="218dp"
         android:layout_height="290dp"
         app:srcCompat="@drawable/monkey_cage"
@@ -29,7 +29,7 @@
         android:text="You Caged the Monkey Mind!"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/monkeyCage"
         android:textSize="25sp"/>
 
 </android.support.constraint.ConstraintLayout>

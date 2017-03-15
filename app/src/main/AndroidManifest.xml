@@ -20,7 +20,7 @@
         <activity
             android:name=".WriteActivity"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".Finished"></activity>
+        <activity android:name=".FinishedActivity"></activity>
     </application>
 
 </manifest>
