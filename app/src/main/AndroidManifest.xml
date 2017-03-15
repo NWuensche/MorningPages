@@ -20,7 +20,8 @@
         <activity
             android:name=".WriteActivity"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".FinishedActivity"></activity>
+        <activity android:name=".FinishedActivity" />
+        <activity android:name=".MonkeyFreeActivity"></activity>
     </application>
 
 </manifest>
