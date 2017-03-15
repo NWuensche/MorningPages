@@ -17,9 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WriteActivity"
-            android:windowSoftInputMode="adjustResize"
-            ></activity>
+        <activity
+            android:name=".WriteActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".Finished"></activity>
     </application>
 
 </manifest>
