@@ -51,6 +51,12 @@ class WriteActivity : AppCompatActivity() {
         super.onWindowFocusChanged(hasFocus)
     }
 
+    override fun onPause() {
+        super.onPause()
+
+        monkeyFree = true
+    }
+
     private fun onCompleted() {
         val item = findViewById(R.id.show_timer) as ActionMenuItemView
         item.text = "00:00:00"
