@@ -15,7 +15,7 @@ class TimeTest {
     @Test
     @Throws(Exception::class)
     fun formatTimeAndCreateListRight() {
-        val list = CurrTime.formatTimeAndCreateList("00:60:00")
+        val list = CurrTime.formatTimeAndCreateList("00:00:60")
 
         assertThat(list.size, `is`(61))
         assertThat(list[0], `is`("00:01:00"))

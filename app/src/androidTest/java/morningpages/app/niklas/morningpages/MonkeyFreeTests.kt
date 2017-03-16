@@ -72,8 +72,6 @@ class MonkeyFreeTests : SuperEspresso() {
         mDevice.pressRecentApps()
         Thread.sleep(500)
         mDevice.pressRecentApps()
-
-        activity.ui
     }
 
 }

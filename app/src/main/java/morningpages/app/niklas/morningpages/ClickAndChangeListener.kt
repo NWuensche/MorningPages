@@ -7,7 +7,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import android.support.v4.content.ContextCompat.startActivity
 import android.content.Intent
-
+import android.view.animation.AnimationUtils
 
 
 /**
@@ -18,14 +18,18 @@ object ClickAndChangeListener {
     var monkeyFree = false
 
     fun onClickText(activity: Activity, pressedNum: String) {
+        val timeBefore = CurrTime.getCurrentTime(activity)
         forwardText(activity, pressedNum)
 
-        if(CurrTime.getCurrentTime(activity) != "00:00:00") { // Zero was pressed at first
+        if(timeBefore == "00:00:00" && CurrTime.getCurrentTime(activity) != "00:00:00") {
             makeButtonsVisible(activity)
         }
     }
 
     private fun makeButtonsVisible(activity: Activity) {
+        activity.deleteLastNumber.startAnimation(AnimationUtils.loadAnimation(activity.deleteLastNumber.context,R.anim.abc_fade_in))
+        activity.startTimer.startAnimation(AnimationUtils.loadAnimation(activity.startTimer.context,R.anim.abc_fade_in))
+
         activity.deleteLastNumber.visibility = View.VISIBLE
         activity.startTimer.visibility = View.VISIBLE
     }
@@ -48,14 +52,17 @@ object ClickAndChangeListener {
     }
 
     fun onClickDelete(activity: Activity) {
+        val timeBefore = CurrTime.getCurrentTime(activity)
+
         backwardText(activity)
 
-        if(CurrTime.getCurrentTime(activity).equals("00:00:00")) {
+        if(timeBefore != "00:00:00" && CurrTime.getCurrentTime(activity) == "00:00:00") {
             makeButtonsInvisible(activity)
         }
     }
 
     private fun backwardText(activity: Activity) {
+
         activity.apply {
             currSingleSeconds.text = currTenSeconds.text
             currTenSeconds.text = currSingleMinutes.text
@@ -66,14 +73,24 @@ object ClickAndChangeListener {
             currSingleHours.text = currTenHours.text
             currTenHours.text = "0"
         }
+
+        if(CurrTime.getCurrentTime(activity) != "00:00:00") {
+            activity.deleteLastNumber.startAnimation(AnimationUtils.loadAnimation(activity.deleteLastNumber.context,R.anim.animation))
+        }
+
     }
 
     private fun makeButtonsInvisible(activity: Activity) {
+        activity.deleteLastNumber.startAnimation(AnimationUtils.loadAnimation(activity.deleteLastNumber.context,R.anim.abc_fade_out))
+        activity.startTimer.startAnimation(AnimationUtils.loadAnimation(activity.startTimer.context,R.anim.abc_fade_out))
+
         activity.deleteLastNumber.visibility = View.INVISIBLE
         activity.startTimer.visibility = View.INVISIBLE
     }
 
     fun switchToWriteActivity(activity: Activity) {
+        activity.startTimer.startAnimation(AnimationUtils.loadAnimation(activity.startTimer.context,R.anim.abc_fade_in))
+
         val intent: Intent = Intent(activity, WriteActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         intent.putExtra("time", CurrTime.getCurrentTime(activity))

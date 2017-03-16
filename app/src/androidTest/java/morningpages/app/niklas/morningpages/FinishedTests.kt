@@ -35,7 +35,6 @@ class FinishedTests : SuperEspresso() {
         onView(withId(R.id.monkeyCage)).check(matches(isDisplayed()))
         onView(isRoot()).perform(pressBack())
         onView(withId(R.id.text1)).check(matches(isDisplayed())) // Back at Timer
-        //TODO onResume mit pressMenu und so testen, wenn geht dann auch in 5MJ
     }
 
     @Test
