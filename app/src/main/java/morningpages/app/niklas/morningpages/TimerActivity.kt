@@ -1,6 +1,7 @@
 package morningpages.app.niklas.morningpages
 
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.activity_main.*
@@ -10,6 +11,8 @@ class TimerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //TODO Mal als Update Snackbar.make(text0, "How long do you want to write?", Snackbar.LENGTH_LONG)
 
         val self = this
 

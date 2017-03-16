@@ -2,18 +2,19 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutTimer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="morningpages.app.niklas.morningpages.TimerActivity"
-    tools:layout_editor_absoluteY="81dp"
-    tools:layout_editor_absoluteX="0dp">
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
 
     <Button
         android:id="@+id/text4"
         android:layout_width="0dp"
         android:layout_height="80dp"
-        android:fontFamily="serif"
         android:background="@android:color/transparent"
+        android:fontFamily="serif"
         android:gravity="center"
         android:text="4"
         android:textSize="35sp"
@@ -25,22 +26,22 @@
         android:id="@+id/text5"
         android:layout_width="122dp"
         android:layout_height="80dp"
-        android:fontFamily="serif"
         android:background="@android:color/transparent"
+        android:fontFamily="serif"
         android:gravity="center"
         android:text="5"
         android:textSize="35sp"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintLeft_toLeftOf="@+id/text2"
         app:layout_constraintRight_toLeftOf="@+id/text3"
-        app:layout_constraintTop_toBottomOf="@+id/text2"
-        app:layout_constraintHorizontal_bias="0.428" />
+        app:layout_constraintTop_toBottomOf="@+id/text2" />
 
     <Button
         android:id="@+id/text6"
         android:layout_width="122dp"
         android:layout_height="80dp"
-        android:fontFamily="serif"
         android:background="@android:color/transparent"
+        android:fontFamily="serif"
         android:gravity="center"
         android:text="6"
         android:textSize="35sp"
@@ -52,40 +53,40 @@
         android:id="@+id/labelHours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="h"
-        android:fontFamily="serif"
-        android:textSize="15sp"
-        android:paddingLeft="2dp"
-        android:paddingBottom="6dp"
-        app:layout_constraintRight_toLeftOf="@+id/currTenMinutes"
+        android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        app:layout_constraintTop_toTopOf="@+id/labelMinutes"
-        android:layout_marginEnd="8dp" />
+        android:fontFamily="serif"
+        android:paddingBottom="6dp"
+        android:paddingLeft="2dp"
+        android:text="h"
+        android:textSize="15sp"
+        app:layout_constraintRight_toLeftOf="@+id/currTenMinutes"
+        app:layout_constraintTop_toTopOf="@+id/labelMinutes" />
 
     <TextView
         android:id="@+id/currTenMinutes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:fontFamily="serif"
         android:text="0"
         android:textSize="60sp"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="40dp"
-        app:layout_constraintHorizontal_bias="0.442" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/currTenSeconds"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:fontFamily="serif"
         android:text="0"
         android:textSize="60sp"
         app:layout_constraintLeft_toRightOf="@+id/labelMinutes"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintTop_toTopOf="@+id/currTenMinutes"
-        android:layout_marginStart="8dp" />
+        app:layout_constraintTop_toTopOf="@+id/currTenMinutes" />
 
     <TextView
         android:id="@+id/currSingleHours"
@@ -101,12 +102,12 @@
         android:id="@+id/currTenHours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
         android:fontFamily="serif"
         android:text="0"
         android:textSize="60sp"
         app:layout_constraintRight_toLeftOf="@+id/currSingleHours"
-        app:layout_constraintTop_toTopOf="@+id/currSingleHours"
-        android:layout_marginTop="0dp" />
+        app:layout_constraintTop_toTopOf="@+id/currSingleHours" />
 
     <Button
         android:id="@+id/text1"
@@ -114,78 +115,78 @@
         android:layout_height="75dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="-3dp"
         android:background="@android:color/transparent"
-        android:gravity="center"
         android:fontFamily="serif"
+        android:gravity="center"
         android:text="1"
         android:textSize="35sp"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/text2"
-        app:layout_constraintTop_toTopOf="@+id/text2"
-        android:layout_marginTop="-3dp" />
+        app:layout_constraintTop_toTopOf="@+id/text2" />
 
     <Button
         android:id="@+id/text2"
         android:layout_width="122dp"
         android:layout_height="75dp"
-        android:fontFamily="serif"
+        android:layout_marginTop="190dp"
         android:background="@android:color/transparent"
+        android:fontFamily="serif"
         android:gravity="center"
         android:text="2"
         android:textSize="35sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="190dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/text3"
         android:layout_width="121dp"
         android:layout_height="75dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:fontFamily="serif"
         android:background="@android:color/transparent"
+        android:fontFamily="serif"
         android:gravity="center"
         android:text="3"
         android:textSize="35sp"
         app:layout_constraintLeft_toRightOf="@+id/text2"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text2"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintTop_toTopOf="@+id/text2" />
 
     <Button
         android:id="@+id/text8"
         android:layout_width="0dp"
         android:layout_height="80dp"
-        android:fontFamily="serif"
         android:background="@android:color/transparent"
+        android:fontFamily="serif"
         android:gravity="center"
         android:text="8"
         android:textSize="35sp"
-        app:layout_constraintTop_toBottomOf="@+id/text5"
+        app:layout_constraintLeft_toLeftOf="@+id/text2"
         app:layout_constraintRight_toRightOf="@+id/text2"
-        app:layout_constraintLeft_toLeftOf="@+id/text2" />
+        app:layout_constraintTop_toBottomOf="@+id/text5" />
 
     <Button
         android:id="@+id/text0"
         android:layout_width="0dp"
         android:layout_height="80dp"
-        android:fontFamily="serif"
         android:background="@android:color/transparent"
+        android:fontFamily="serif"
         android:gravity="center"
         android:text="0"
         android:textSize="35sp"
-        app:layout_constraintTop_toBottomOf="@+id/text8"
+        app:layout_constraintLeft_toRightOf="@+id/text7"
         app:layout_constraintRight_toLeftOf="@+id/text9"
-        app:layout_constraintLeft_toRightOf="@+id/text7" />
+        app:layout_constraintTop_toBottomOf="@+id/text8" />
 
     <Button
         android:id="@+id/text9"
         android:layout_width="122dp"
         android:layout_height="80dp"
-        android:fontFamily="serif"
         android:background="@android:color/transparent"
+        android:fontFamily="serif"
         android:gravity="center"
         android:text="9"
         android:textSize="35sp"
@@ -201,7 +202,7 @@
         android:fontFamily="serif"
         android:gravity="center"
         android:scaleType="centerInside"
-        android:src="@drawable/next"
+        app:srcCompat="@drawable/next"
         android:text="9"
         android:textSize="35sp"
         android:visibility="invisible"
@@ -213,14 +214,14 @@
         android:id="@+id/text7"
         android:layout_width="122dp"
         android:layout_height="80dp"
-        android:fontFamily="serif"
         android:background="@android:color/transparent"
+        android:fontFamily="serif"
         android:gravity="center"
         android:text="7"
         android:textSize="35sp"
-        app:layout_constraintTop_toBottomOf="@+id/text4"
         app:layout_constraintLeft_toLeftOf="@+id/text4"
-        app:layout_constraintRight_toLeftOf="@+id/text5" />
+        app:layout_constraintRight_toLeftOf="@+id/text5"
+        app:layout_constraintTop_toBottomOf="@+id/text4" />
 
     <ImageButton
         android:id="@+id/deleteLastNumber"
@@ -230,7 +231,7 @@
         android:fontFamily="serif"
         android:gravity="center"
         android:scaleType="centerInside"
-        android:src="@drawable/backspace"
+        app:srcCompat="@drawable/backspace"
         android:text="7"
         android:textSize="35sp"
         android:visibility="invisible"
@@ -245,8 +246,8 @@
         android:fontFamily="serif"
         android:text="0"
         android:textSize="60sp"
-        app:layout_constraintTop_toTopOf="@+id/currTenMinutes"
-        app:layout_constraintLeft_toRightOf="@+id/currTenMinutes" />
+        app:layout_constraintLeft_toRightOf="@+id/currTenMinutes"
+        app:layout_constraintTop_toTopOf="@+id/currTenMinutes" />
 
     <TextView
         android:id="@+id/currSingleSeconds"
@@ -262,15 +263,15 @@
         android:id="@+id/labelMinutes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="-1dp"
         android:fontFamily="serif"
+        android:paddingBottom="6dp"
         android:paddingLeft="2dp"
         android:text="m"
-        android:paddingBottom="6dp"
         android:textSize="15sp"
-        app:layout_constraintLeft_toRightOf="@+id/currSingleMinutes"
-        android:layout_marginLeft="-1dp"
         app:layout_constraintBottom_toBottomOf="@+id/currSingleMinutes"
-        android:layout_marginBottom="0dp" />
+        app:layout_constraintLeft_toRightOf="@+id/currSingleMinutes" />
 
     <TextView
         android:id="@+id/currentSeconds"
@@ -281,7 +282,7 @@
         android:paddingLeft="2dp"
         android:text="s"
         android:textSize="15sp"
-        app:layout_constraintTop_toTopOf="@+id/labelMinutes"
-        app:layout_constraintLeft_toRightOf="@+id/currSingleSeconds" />
+        app:layout_constraintLeft_toRightOf="@+id/currSingleSeconds"
+        app:layout_constraintTop_toTopOf="@+id/labelMinutes" />
 
 </android.support.constraint.ConstraintLayout>
