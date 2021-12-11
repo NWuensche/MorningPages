@@ -27,14 +27,14 @@ class WriteActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_write, menu)
-        menu!!.findItem(R.id.show_timer).title = CurrTime.formatTime(intent.extras.getString("time")).toString()
+        menu!!.findItem(R.id.show_timer).title = CurrTime.formatTime(intent.extras!!.getString("time")!!).toString()
         return super.onCreateOptionsMenu(menu)
     }
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         if(firstTime && hasFocus) {
             val item = findViewById(R.id.show_timer) as ActionMenuItemView
-            val times = CurrTime.formatTimeAndCreateList(intent.extras.getString("time")).drop(1) // Takes some time, so start with already ticked
+            val times = CurrTime.formatTimeAndCreateList(intent.extras!!.getString("time")!!).drop(1) // Takes some time, so start with already ticked
             PublishSubject.interval(1, java.util.concurrent.TimeUnit.SECONDS)
                         .observeOn(AndroidSchedulers.mainThread())
                     .take(times.size)
